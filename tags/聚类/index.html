@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
+	<link rel="stylesheet" href="/css/_partial/prism.css?v=1.7.2">
+	
     <!-- custom head -->
     
 
@@ -130,6 +132,10 @@
         </div>
         
         
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
 </header>
 <header class="content-header tags-header">
@@ -148,19 +154,19 @@
             ">全部</a>
         
 
-            <a href="/tags/chrome/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">chrome</a>
+            <a href="/tags/chrome/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">chrome</a>
 
         
 
-            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">机器学习</a>
+            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">机器学习</a>
 
         
 
-            <a href="/tags/%E9%99%8D%E7%BB%B4/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">降维</a>
+            <a href="/tags/%E9%99%8D%E7%BB%B4/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">降维</a>
 
         
 
-            <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">大数据</a>
+            <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">大数据</a>
 
         
 
@@ -169,6 +175,18 @@
         
 
             <a href="/tags/%E8%81%9A%E7%B1%BB/" style="-webkit-order:1;order:1" class="tags-list-item waves-effect waves-button waves-light active">聚类</a>
+
+        
+
+            <a href="/tags/Win10/" style="-webkit-order:2;order:2" class="tags-list-item waves-effect waves-button waves-light">Win10</a>
+
+        
+
+            <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="-webkit-order:3;order:3" class="tags-list-item waves-effect waves-button waves-light">树莓派</a>
+
+        
+
+            <a href="/tags/edge/" style="-webkit-order:4;order:4" class="tags-list-item waves-effect waves-button waves-light">edge</a>
 
         
     </nav>
@@ -249,6 +267,8 @@
 --!>
         </p>
     </div>
+	
+	<script src="/js/prism/prism.min.js?v=1.7.2" async></script>
 </footer>
 
     </main>
@@ -256,9 +276,55 @@
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://richardyann.gitee.io/tags/%E8%81%9A%E7%B1%BB/&title=ATOM 阿瞳目&pic=https://richardyann.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://richardyann.gitee.io/tags/%E8%81%9A%E7%B1%BB/&title=ATOM 阿瞳目&source=欢迎光临~" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://richardyann.gitee.io/tags/%E8%81%9A%E7%B1%BB/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=ATOM 阿瞳目&url=https://richardyann.gitee.io/tags/%E8%81%9A%E7%B1%BB/&via=https://richardyann.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://richardyann.gitee.io/tags/%E8%81%9A%E7%B1%BB/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aQXLCQAwFUe5/aVKVFRsP/SWHClJ7RQUznueFIo30eODr+Xu9fn79y9WdV99erXBe+YZLhgwZX8t4Hq/z4znm/CL4cy+pMmTIWMDgQZYESh46CQ+FdRkyZMg4bp0ExPQeGTJkyLiLca4l+Zr91FOGDBkbGKSIJaEzTRDT4vmGWlyGDBlfyKg1Bj7z+c/7GzJkyPj3jGd41Vbrtznf7EqGDBmjGbUCspNQkoDOXxaa45AhQ8YIRpqo8XGutBzlTVN0dihDhowRDB4EO22A9KguHiCTIUPGaAZPEFNwraC9oZyWIUPGaEatgEwTRz600S93ZciQMY+RFrE8KazB+PiFDBkyZjN4EpaWnfxgrlNIy5AhYyeDp2KdlI6viYK1DBkyFjBqaR8/MusEVhTcZciQMZqRjlbU6uNOeUwKXRkyZMxmpD/jSV4nEPPCWIYMGRsY5ED/M8Ut2XowbCFDhoxxjPQHaXHbCZ0ot5UhQ8Z6Bm9bdtqc8WwIOW6TIUPGCAYvXAmyE6xJSH3T35AhQ8ZKRnroz7dCMrqg0JUhQ8ZoRjrIlXZH40e2B8tkyJAxj1FL9TobTYtkNAgiQ4aM0YxOsEuHvdKGJV9NhgwZGxi1ZkDtSK6WhpLXJ0OGjA0MXjTyDfEDO/4f4PJOGTJkyLh1hCIdBUONBxkyZMgoDW/VDsh4M1WGDBnbGOlhPceQNmc6YCFDhoxtjE7pyBuftUEKzpYhQ8ZQxg9ma61jPjsc/gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 </script>
@@ -319,7 +385,7 @@ MathJax.Hub.Queue(function() {
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '再看看嘛~';
+            document.title = '别走~待会儿~嘛去~';
             clearTimeout(titleTime);
         } else {
             document.title = 'Welcome to ATOM！';

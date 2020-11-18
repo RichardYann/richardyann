@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
+	<link rel="stylesheet" href="/css/_partial/prism.css?v=1.7.2">
+	
     <!-- custom head -->
     
 
@@ -130,6 +132,10 @@
         </div>
         
         
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
 </header>
 <header class="content-header archives-header">
@@ -216,6 +222,8 @@
 --!>
         </p>
     </div>
+	
+	<script src="/js/prism/prism.min.js?v=1.7.2" async></script>
 </footer>
 
     </main>
@@ -223,9 +231,55 @@
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://richardyann.gitee.io/archives/2020/02/&title=ATOM 阿瞳目&pic=https://richardyann.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://richardyann.gitee.io/archives/2020/02/&title=ATOM 阿瞳目&source=欢迎光临~" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://richardyann.gitee.io/archives/2020/02/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=ATOM 阿瞳目&url=https://richardyann.gitee.io/archives/2020/02/&via=https://richardyann.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://richardyann.gitee.io/archives/2020/02/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3ay07DMBAF0P7/T5ctiybcO05R6xyvqhI5PiANnsfjEa/nr3X0zfn3s7dcvDAwML6W8TxdR8+0L072nD2DgYFxH8bRi8+fOXoyD5pHR8/PhoGBgZF8To6yEnAxMDAwVhh56GyfwcDAwJglsecbnRfgrgrWF+TiGBgYX8jIU83///yW/gYGBsZXMZ7laktybel/eCoMDIytGXmAywthScNg1gz44xqKgYGxKWMlgZwFzXz8IkmYiy4oBgbGdoxko/a4V7U8X+yMgYGxNSMZ5Jptmvxqrm2XYmBg3IGRX9pmpbFZUzNvlGJgYOzNaAtks2DaXjrzHTAwMPZm5Mr2p3kbYJY8H+biGBgY2zFWDtGW+9v09eIkFgMD42sZ68MQbZtzVoAr/g4YGBibMtZDajvaNWuURs1LDAyMTRmzEbGiTD+6bhbDYRgYGLdk5IfOf9qG3aiPcVU3AwMD4+MZ+XFnV7c2ZU3e9aLchoGBsSljFhZz0uwKWCexGBgYt2EME8iylJ+3PNuLKQYGxh0Y+YvzhDNJjGcjF9H/DQwMjE0ZyahEm762wxyzXxkGBsaujGe5cupKe6DdHwMDY29GvlpqXqprQ3ZeKMTAwNiJkQfZ9vI3G55IUuj6goiBgbEFI0luk2CaNwMuRmJgYGAs3C7b0Yp2pAMDAwNjfbSiDc15C/ONARcDA+MjGXkzIC/AtZe/hISBgXFPRn5RW0lx2wR41irAwMDYjvEDaF5gvtmLQdQAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 </script>
@@ -286,7 +340,7 @@ MathJax.Hub.Queue(function() {
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '再看看嘛~';
+            document.title = '别走~待会儿~嘛去~';
             clearTimeout(titleTime);
         } else {
             document.title = 'Welcome to ATOM！';

@@ -43,6 +43,8 @@
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
+	<link rel="stylesheet" href="/css/_partial/prism.css?v=1.7.2">
+	
     <!-- custom head -->
     
 
@@ -136,6 +138,10 @@
         </div>
         
         
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
 </header>
 <header class="content-header post-header">
@@ -166,7 +172,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#0-引言"><span class="post-toc-number">1.</span> <span class="post-toc-text">0. 引言</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-算法初窥"><span class="post-toc-number">2.</span> <span class="post-toc-text">1. 算法初窥</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-高斯混合模型的引入"><span class="post-toc-number">3.</span> <span class="post-toc-text">2. 高斯混合模型的引入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-按照高斯混合模型进行聚类划分"><span class="post-toc-number">4.</span> <span class="post-toc-text">3. 按照高斯混合模型进行聚类划分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-确定高斯混合模型参数"><span class="post-toc-number">5.</span> <span class="post-toc-text">4. 确定高斯混合模型参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#①-pmb-mu"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">① $\pmb{\mu}:$</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#②-pmb-Sigma"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">② $\pmb{\Sigma}:$</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#③-alpha"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">③ $\alpha:$</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参考资料"><span class="post-toc-number">6.</span> <span class="post-toc-text">参考资料</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#0-引言"><span class="post-toc-text">0. 引言</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-算法初窥"><span class="post-toc-text">1. 算法初窥</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-高斯混合模型的引入"><span class="post-toc-text">2. 高斯混合模型的引入</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-按照高斯混合模型进行聚类划分"><span class="post-toc-text">3. 按照高斯混合模型进行聚类划分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-确定高斯混合模型参数"><span class="post-toc-text">4. 确定高斯混合模型参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#①-pmb-mu"><span class="post-toc-text">① $\pmb{\mu}:$</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#②-pmb-Sigma"><span class="post-toc-text">② $\pmb{\Sigma}:$</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#③-alpha"><span class="post-toc-text">③ $\alpha:$</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参考资料"><span class="post-toc-text">参考资料</span></a></li></ol>
         </nav>
     </aside>
 
@@ -286,6 +292,51 @@
 
 
             
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/&title=《高斯混合模型GMM聚类的步骤和推导》 — ATOM 阿瞳目&pic=https://richardyann.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/&title=《高斯混合模型GMM聚类的步骤和推导》 — ATOM 阿瞳目&source=欢迎光临~" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高斯混合模型GMM聚类的步骤和推导》 — ATOM 阿瞳目&url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/&via=https://richardyann.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
 
 
         </div>
@@ -297,7 +348,7 @@
     <div class="waves-block waves-effect prev">
       <a href="/2020/05/16/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E9%BB%98%E8%AE%A4%E5%85%A8%E5%B1%8F%E5%90%AF%E5%8A%A8%EF%BC%88%E9%9D%9E-kiosk%E6%A8%A1%E5%BC%8F%EF%BC%89/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Chrome浏览器默认全屏启动（非--kiosk模式）</h4>
+        <h5 class="title">Chrome浏览器默认全屏启动（非--kiosk模式）</h5>
       </a>
     </div>
   
@@ -306,7 +357,7 @@
     <div class="waves-block waves-effect next">
       <a href="/2020/02/16/PCA%E9%99%8D%E7%BB%B4%E7%9A%84%E6%95%B0%E5%AD%A6%E7%90%86%E8%A7%A3%E4%B8%8E%E4%B8%BE%E4%BE%8B/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">PCA降维的数学理解与举例</h4>
+        <h5 class="title">PCA降维的数学理解与举例</h5>
       </a>
     </div>
   
@@ -326,6 +377,33 @@
 
 
 
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "M4yQMNFFRkn5MlX8nVut4Bns-gzGzoHsz",
+            appKey: "2GXS36F9dMO6lib96qjPLtIr",
+            avatar: "mm",
+			visiter: "false",
+            placeholder: "说点儿什么吗...",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
 
 
 
@@ -338,7 +416,7 @@
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
-        谢谢大爷~
+        你这么好看，不会介意请我杯咖啡吧~
         <i class="icon icon-quote-right"></i>
     </h3>
     <div class="reward-content">
@@ -387,6 +465,8 @@
 --!>
         </p>
     </div>
+	
+	<script src="/js/prism/prism.min.js?v=1.7.2" async></script>
 </footer>
 
     </main>
@@ -394,9 +474,55 @@
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/&title=《高斯混合模型GMM聚类的步骤和推导》 — ATOM 阿瞳目&pic=https://richardyann.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/&title=《高斯混合模型GMM聚类的步骤和推导》 — ATOM 阿瞳目&source=欢迎光临~" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《高斯混合模型GMM聚类的步骤和推导》 — ATOM 阿瞳目&url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/&via=https://richardyann.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://richardyann.gitee.io/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAFSUlEQVR42u3aQY7bMBAEQP//0wmQU4Jdyd0zVBDEpZOxlmmyuICHPXq94uvHr+vq9dVfvl5fx0w+m89h/42vJy58+PDhw4fvYtD7qSfX/XQ333hPcLXZ+d9nW4IPHz58+PDN+JJipf3hv1/2bA73rxOUvPyK5okPHz58+PA9xpecl+9Hvj+Wz4qYdqva7cGHDx8+fPj+Bb6WLC8OZs2D2ea1c8OHDx8+fPhO8eUt6n27vW20z4qMvLT6S70OfPjw4cOHb1Eo/N+vD1/48OHDhw9f8PO8eVjt/s48as8fbktigvwbozXiw4cPHz58E41hYH3q8bXZUTxpHuQbOQs78OHDhw8fvpav/pEeLaM9kLdFyb5N3v5b4MOHDx8+fDO+qK4p72nbzO2Y+VI3s803AB8+fPjw4Wv5kgN/Hqnn8fosRMjHmYX1ybv48OHDhw/fjG9TTOQlQvJuGwTkTYVNyfVmPvjw4cOHD9+IL/lYDrdn3Zcds3uSpgI+fPjw4cO34Zsd1/MG+Sw0z9vqs/m0n63b5Pjw4cOHD98orN8cvNuIoW177x9iy9f1BhEfPnz48OGL+TbTOtV4bguUWZnSFkNRkIEPHz58+PBNMvA6Iq+HHi1gsz1tC3wT3+PDhw8fPnw53yy8bouP/J4NdBteJONE/Q18+PDhw4dvMf7Zn/a86T4L6JM2Q7Llq14HPnz48OHDd4jvFMoGqG14tw3+nDKKJ/Dhw4cPH76gTT5rPCcPk23CiM09+cbPvuu1Xxg+fPjw4ftgvvbwPIu/kwP8rO3dzvxUxI8PHz58+PBt+JKj+6xA2YwwG7/dyLaFgA8fPnz48O352nIhD7Vnof/sIbO2VdA+dYYPHz58+PCd4mvb0m25M2tp51t7qmQp5o8PHz58+PCN5t8+0fYEzSxY38cB+XqLZjk+fPjw4cN3MWYSjiet9DbiT7jbgmm2Ye2df7yLDx8+fPjwTRKA4qc9L3c27fZNWN+2DWbNCXz48OHDh2/Gtwm4k0JkmGGMAvR8tM3/1ze9Dnz48OHDh6/Mq/Mjfcu9Cc3zcTZlUNsax4cPHz58+J7g2zfC82Z5Ps5sebN1Jc0JfPjw4cOHr+XbNInbwiIvGjbbk8QKeXD/5lP48OHDhw/fgi//wc6D+zaAaBsGm4b3rOQqevX48OHDhw9fyddOYpVbHEq/2yZBfv9lTI8PHz58+PCVfE8E3O2Bf7aYTdyftwHeRAb48OHDhw9fl1FHV/6T3y4+jwPydsJse5K2RF7e4cOHDx8+fPkDarMipm2Kzxre+5KobUi8KZjw4cOHDx++mG9WfORTyUc7VaacDevf3IkPHz58+PCVfG1gnZcyyZj79nle1uRt/qLiw4cPHz58+NZ8s0ZyHj2civ5nV76KemPw4cOHDx++gO/scPnhv20PPBfWt2t5cDfw4cOHD98H8LUlQv7w1mwz2qKnPd634QI+fPjw4cN3lq8tNfISYdbMnrXhZ3F8HtZfFj348OHDhw/fiK991CwvVjZH9LaMSMqdWfR/+Q+EDx8+fPjwrfnawmX2EFhbLuz58jijKNTw4cOHDx++yRl/WCjkm9GWKbNAPydom+6bogcfPnz48OHbN783VzvdvKBpW+B5ILKq/vDhw4cPH77RF+RVTxs97A/k+01aFWT48OHDhw/fY3yzguaJaH7GsQkaLkfAhw8fPnz4HubLJ5ePMIvv82N/284vRsOHDx8+fPhGfO3xPqFpQdvD/+bA3z7QdqzXgQ8fPnz4Pp4vD8RbmvsS4dTBfrPBeSg/a13gw4cPHz58v73+CYhyuZn7EvZkAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 </script>
@@ -457,7 +583,7 @@ MathJax.Hub.Queue(function() {
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '再看看嘛~';
+            document.title = '别走~待会儿~嘛去~';
             clearTimeout(titleTime);
         } else {
             document.title = 'Welcome to ATOM！';

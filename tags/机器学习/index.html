@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
+	<link rel="stylesheet" href="/css/_partial/prism.css?v=1.7.2">
+	
     <!-- custom head -->
     
 
@@ -130,6 +132,10 @@
         </div>
         
         
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
     </div>
 </header>
 <header class="content-header tags-header">
@@ -169,6 +175,18 @@
         
 
             <a href="/tags/%E8%81%9A%E7%B1%BB/" style="-webkit-order:5;order:5" class="tags-list-item waves-effect waves-button waves-light">聚类</a>
+
+        
+
+            <a href="/tags/Win10/" style="-webkit-order:6;order:6" class="tags-list-item waves-effect waves-button waves-light">Win10</a>
+
+        
+
+            <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="-webkit-order:7;order:7" class="tags-list-item waves-effect waves-button waves-light">树莓派</a>
+
+        
+
+            <a href="/tags/edge/" style="-webkit-order:8;order:8" class="tags-list-item waves-effect waves-button waves-light">edge</a>
 
         
     </nav>
@@ -283,6 +301,8 @@
 --!>
         </p>
     </div>
+	
+	<script src="/js/prism/prism.min.js?v=1.7.2" async></script>
 </footer>
 
     </main>
@@ -290,9 +310,55 @@
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://richardyann.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&title=ATOM 阿瞳目&pic=https://richardyann.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://richardyann.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&title=ATOM 阿瞳目&source=欢迎光临~" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://richardyann.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=ATOM 阿瞳目&url=https://richardyann.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&via=https://richardyann.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://richardyann.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aQW7CQAwFUO5/6VbqqhIEvu0xpdLLCiUizJvF2Ni+3eLr6+fK7189Te78vn9/3TYuPDw8vNbSn78uZ1QByduu1hNtAR4eHt4ar/cz909zfLK46nbj4eHhfRovxySBpJoo4+Hh4f1H3vMDupqUTw59PDw8vE/gJYtLkuleIn4qHcfDw8N7D2+Szv7V58X+Hh4eHt6gq15NjueDBZOm14Nv4eHh4S3wzi43KWRspNQv1oaHh4d3lJcXIOYjWXn5IG+wvVgPHh4e3jIvDxV5qXey9F7QuvzHgIeHh3eIdzg3jwewJtuabAceHh7eHm/S5p+UWavNreZTPDw8vAVeNUXOA0ASWnqljepwAx4eHt5ZXt6U6h30+YFeLW1EBQs8PDy8BV5SCKim15NjPdnWvOSBh4eHt8frHeLJsqoDXqM69NVTPDw8vKO86nhTXiyY7HdvTKEcEvDw8PD6NdhsaCkov86LvElw6n0XDw8P7xRvcsTnRYpeQMoDzOX24eHh4S3wTjWuqmWFaqOr92Y8PDy8PV619HC2MVYdxmq2yvDw8PAO8cqjS4OnPXY+mPXiHwMeHh7eMq96HOfDAb2lN2eo8PDw8JZ5eaG2VybojRRUR7UuC7h4eHh4C7zeYZ1sRDXV7o1wlevTeHh4eEd5yaFfTXPzYa9kVdF24OHh4S3wqkNOvQ5btcRQLe+WE2s8PDy8AS8PBtXCRL7oSRPuBR4PDw/vjbztkanyQnuBBw8PD2+BVz1wqwMBk6JD3ujqFUHw8PDwJrwkGFRfXQ02vQQ9CgZ4eHh4a7xeujwZLMi3qddIw8PDw/sEXvWHJ4WD3q8/uI+Hh4f3Mby8iDApf+SMw4EBDw8PL+BN0uVJIaM6UlAeYsDDw8Nb4FUbYPm4QO+d1fbb4f4eHh4e3rPvfgOtVbtgPItuJAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 </script>
@@ -353,7 +419,7 @@ MathJax.Hub.Queue(function() {
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '再看看嘛~';
+            document.title = '别走~待会儿~嘛去~';
             clearTimeout(titleTime);
         } else {
             document.title = 'Welcome to ATOM！';

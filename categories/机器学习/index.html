@@ -37,6 +37,8 @@
     <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
+	<link rel="stylesheet" href="/css/_partial/prism.css?v=1.7.2">
+	
     <!-- custom head -->
     
 
@@ -129,6 +131,10 @@
             </a>
         </div>
         
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
         
     </div>
 </header>
@@ -267,6 +273,8 @@
 --!>
         </p>
     </div>
+	
+	<script src="/js/prism/prism.min.js?v=1.7.2" async></script>
 </footer>
 
     </main>
@@ -274,9 +282,55 @@
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://richardyann.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&title=ATOM 阿瞳目&pic=https://richardyann.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://richardyann.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&title=ATOM 阿瞳目&source=欢迎光临~" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://richardyann.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=ATOM 阿瞳目&url=https://richardyann.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/&via=https://richardyann.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://richardyann.gitee.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3aQW7jMBAEQP//07vAnhYI5HTPkIkPpVMgOxKLB5Lumdcrvv78u77e+f/6+s320+RdrxsXHh4e3mjoT1c+0NkEvX9CMp6n7+Dh4eHd5r0fUI5/v4i3EzebDjw8PLzP4UWPKxf0/cEdDw8P7/N5bbiQHN+TozkeHh7ep/HyF7fH5Tze3R/i8fDw8H6G1xbAPuHvi/U9PDw8vEVVPQkO8lghKYPlkUQ0Wjw8PLwLvFlUOnvxrAyWbwbFLwY8PDy8NW/TNJC3WOXbQBvg1s/Ew8PDW/Dal+WtAJuC2bE4GA8PD+9HeLNyVzLE5OB76hiNh4eHd5s3Cx2SA+6moaoNkb9JWfDw8PAO8WZlpxmmbe2abUWPz8HDw8M7xHv/mlkPV1vWyt9bh8h4eHh413h5Q0BbxGq3lk3sW8e4eHh4eCPeLGBNtpPNcp888zXbr/Dw8PCO8jbgU5vBqemLJgIPDw9vxGtL+22TQV2miqtX0aTg4eHh/QhvFq225at8k2gbF4oYFw8PD2/Ba3/850Hq2caCPMjAw8PD+y3eptyVL/GntpbHIzUeHh7eNd4s683j2lnrwKwMhoeHh3eb10al+WG6jYk3Jbc6Y8bDw8Nb8Ip/WBT78+JWHo58M048PDy8C7x2Oc6jivZ+Cy42MDw8PLyjvNnBty38tyFvfvSvC2B4eHh4R3ntdRbZbiHRIR4PDw/vAi8/tm7KY3twmzbg4eHh3ePNNoO26WofbbSbAR4eHt49Xrv4zhoLckASPeSRBB4eHt493r4JIF/QZ58mU/k4Tjw8PLxrvE3ZqY0hNmFufeHh4eH9Km9Wwt/HE7OGMDw8PLzP57WFtLOtXY/PxMPDw7vGyxfo9/dnLQX5SPJJxMPDw7vHm/2iz4teyStnU9ZOKx4eHt6a9xdF4OQpueQnVQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
     <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 
 </script>
@@ -337,7 +391,7 @@ MathJax.Hub.Queue(function() {
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '再看看嘛~';
+            document.title = '别走~待会儿~嘛去~';
             clearTimeout(titleTime);
         } else {
             document.title = 'Welcome to ATOM！';
