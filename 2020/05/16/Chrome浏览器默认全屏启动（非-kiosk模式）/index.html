@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Chrome浏览器默认全屏启动（非--kiosk模式） | ATOM 阿瞳目 | 欲穷千里目，更上一层楼</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="chrome">
+    <meta name="description" content="十几天后更新：&amp;emsp;&amp;emsp;现在又看了一遍前面的方法，真是太蠢了！！&amp;emsp;&amp;emsp;实际上，只需要修改快捷方式的参数，只不过后面不加 –kiosk，而是在后面加 –start-fullscreen 即可！ 后面的什么问题都没有了 &amp;emsp;&amp;emsp;也不知道之前是哪根筋儿抽了。。。  &amp;emsp;&amp;emsp;最近捣鼓电脑的时候，觉得chrome全屏模式使用起来视觉效果很棒，再">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome浏览器默认全屏启动（非--kiosk模式）">
+<meta property="og:url" content="https://richardyann.gitee.io/2020/05/16/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E9%BB%98%E8%AE%A4%E5%85%A8%E5%B1%8F%E5%90%AF%E5%8A%A8%EF%BC%88%E9%9D%9E-kiosk%E6%A8%A1%E5%BC%8F%EF%BC%89/index.html">
+<meta property="og:site_name" content="ATOM 阿瞳目">
+<meta property="og:description" content="十几天后更新：&amp;emsp;&amp;emsp;现在又看了一遍前面的方法，真是太蠢了！！&amp;emsp;&amp;emsp;实际上，只需要修改快捷方式的参数，只不过后面不加 –kiosk，而是在后面加 –start-fullscreen 即可！ 后面的什么问题都没有了 &amp;emsp;&amp;emsp;也不知道之前是哪根筋儿抽了。。。  &amp;emsp;&amp;emsp;最近捣鼓电脑的时候，觉得chrome全屏模式使用起来视觉效果很棒，再">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200516135752797.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjA2MjAxOA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200516140501339.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjA2MjAxOA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200516142956101.gif#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200516141601976.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjA2MjAxOA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-05-16T06:32:13.000Z">
+<meta property="article:modified_time" content="2020-05-28T02:16:22.881Z">
+<meta property="article:author" content="Richard Yann">
+<meta property="article:tag" content="chrome">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200516135752797.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjA2MjAxOA==,size_16,color_FFFFFF,t_70#pic_center">
+    
+        <link rel="alternate" type="application/atom+xml" title="ATOM 阿瞳目" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Richard Yann</h5>
+          <a href="mailto:yanrichard500@gmail.com" title="yanrichard500@gmail.com" class="mail">yanrichard500@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                归档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://blog.csdn.net/weixin_42062018" target="_blank" rel="noopener"  >
+                <i class="icon icon-lg icon-link"></i>
+                CSDN
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/RichardYann" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Chrome浏览器默认全屏启动（非--kiosk模式）</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Chrome浏览器默认全屏启动（非--kiosk模式）</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-05-16T06:32:13.000Z" itemprop="datePublished" class="page-time">
+  2020-05-16
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#十几天后更新："><span class="post-toc-number">1.</span> <span class="post-toc-text">十几天后更新：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#总体思路"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">总体思路</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#step-1"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">step 1</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#step-2"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">step 2</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#step-3"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">step 3</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#step4"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">step4</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-Chrome浏览器默认全屏启动（非-kiosk模式）"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Chrome浏览器默认全屏启动（非--kiosk模式）</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-05-16 14:32:13" datetime="2020-05-16T06:32:13.000Z"  itemprop="datePublished">2020-05-16</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾</a></li></ul>
+
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="十几天后更新："><a href="#十几天后更新：" class="headerlink" title="十几天后更新："></a>十几天后更新：</h4><p>&emsp;&emsp;现在又看了一遍前面的方法，真是太蠢了！！<br>&emsp;&emsp;<strong>实际上，只需要修改快捷方式的参数，只不过后面不加 –kiosk，而是在后面加 –start-fullscreen 即可！</strong> 后面的什么问题都没有了</p>
+<p>&emsp;&emsp;也不知道之前是哪根筋儿抽了。。。</p>
+<hr>
+<p>&emsp;&emsp;最近捣鼓电脑的时候，觉得chrome全屏模式使用起来视觉效果很棒，再配合一些插件和快捷键，甚至不需要动鼠标，在全屏模式下就可以流畅丝滑的浏览网页<br>&emsp;&emsp;（全屏浏览用到的插件后面会提到）</p>
+<p>&emsp;&emsp;那么作为一个懒癌晚期患者，我自然不希望每次打开chrome后还得手动全屏，或者按<code>F11</code>键全屏（F11辣么远，真累T_T）。于是网上搜了一圈，结果发现所有的办法都是在快捷方式后面加 –kiosk 参数。</p>
+<p>&emsp;&emsp;但是这个方法有个非常严重的弊端——<strong>无法退出全屏，甚至连右键都无法使用！</strong> 这绝对是我无法忍受的！</p>
+<p>&emsp;&emsp;因为 –kiosk参数本身是chrome自带的演示模式，用来给客户展示特定的网页，在这种情况下并不希望客户有多余的操作，但这对我们普通使用者来说就不是那么友好了，我们只是希望启动后默认全屏，正常的全屏！！</p>
+<p>&emsp;&emsp;经过锲而不舍的尝试，我总算解决了这个问题 ↓ ↓ ↓</p>
+<h5 id="总体思路"><a href="#总体思路" class="headerlink" title="总体思路"></a>总体思路</h5><p>利用 .bat 文件，通过命令让chrome全屏；再创建快捷方式并修改图标</p>
+<h5 id="step-1"><a href="#step-1" class="headerlink" title="step 1"></a>step 1</h5><p>在桌面新建一个 txt 文档，打开后里面编辑：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">start chrome --start-fullscreen</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+<p>保存后命名为 chrome.bat<br>(有的电脑默认不显示扩展名，那么这样改没用，需要先显示扩展名再修改)</p>
+<blockquote>
+<p>注意！这里的命令基本上只能这么写，如果在 “chrome” 前不加 “start” ，那么即使后面有 “exit”，打开程序后命令行黑框也无法自动关闭；<br>如果把 “chrome” 换成 “chrome.exe”，打开后将会成为 kiosk模式</p>
+</blockquote>
+<h5 id="step-2"><a href="#step-2" class="headerlink" title="step 2"></a>step 2</h5><p>将 chrome.bat 文件移动到 chrome 所在的文件夹下（必须放在这里，因为上面的命令由于各种原因只能用相对地址）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdnimg.cn/20200516135752797.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjA2MjAxOA==,size_16,color_FFFFFF,t_70#pic_center" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h5 id="step-3"><a href="#step-3" class="headerlink" title="step 3"></a>step 3</h5><p>右键 chrome.bat 建立快捷方式到桌面，并对快捷方式右键 &gt; 属性 &gt; 更改图标，找到刚才 chrome 所在文件夹，选择 chrome.exe 就会出现 chrome的图标<br>最后把快捷方式的名称一改就大功告成</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdnimg.cn/20200516140501339.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjA2MjAxOA==,size_16,color_FFFFFF,t_70#pic_center" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h5 id="step4"><a href="#step4" class="headerlink" title="step4"></a>step4</h5><p>如果还想固定到开始菜单 or 任务栏的话，因为是自己建的快捷方式，所以需要如下操作：</p>
+<ul>
+<li><p>固定到开始菜单：<br>找到开始菜单的文件夹，把快捷方式放入文件夹中</p>
+</li>
+<li><p>固定到任务栏：<br>a) 在任意位置新建一个文件夹，把快捷方式放入其中，然后右键任务栏 &gt; 工具栏 &gt; 新建工具栏 &gt; 选择刚才新建的文件夹<br>b) 然后右键新建的工具栏（一般在任务栏右边）取消勾选 “显示文本”“显示标题”<br>c) 把新工具栏移到最左边（强行移，使劲儿移，一次移不过去，拖着它怼两下就移过去了）</p>
+</li>
+</ul>
+<p>最终点击图标直接打开正常的全屏模式，效果如图：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdnimg.cn/20200516142956101.gif#pic_center" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<hr>
+<p>至于前面说的全屏浏览插件，就两个：</p>
+<ol>
+<li>tabtiles ： 可以在全屏时鼠标移动到特定位置，显示标签页和地址栏，平时隐藏（还不错，就是有点丑，有了vimium说实话其实可以不要这个了）</li>
+<li>vimium ： 可以像 vim 一样 完全用键盘进行任何操作（看着复杂，但很快就会得心应手）<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://img-blog.csdnimg.cn/20200516141601976.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjA2MjAxOA==,size_16,color_FFFFFF,t_70#pic_center" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+</li>
+</ol>
+<p>具体大家可以自行搜索、安装、尝试，我就不多介绍了</p>
+<p>然后，在chrome的扩展程序中可以设置 键盘快捷键，这样连扩展程序我们也可以在全屏下使用了</p>
+<p>最后，记一记常用的chrome快捷键（因为在某些特定页面，比如新标签页、谷歌商店、设置页面等，上面的插件不能使用），如 <code>Ctrl + W</code>关闭当前标签页，<code>Ctrl + Tab</code>切换标签页， <code>Alt + 左右键</code>前进和后退</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-05-28T02:16:22.881Z" itemprop="dateUpdated">2020-05-28 10:16:22</time>
+</span><br>
+
+
+        
+        原创不易，转载请注明出处哦~
+        
+    </div>
+    
+    <footer>
+        <a href="https://richardyann.gitee.io">
+            <img src="/img/avatar.jpg" alt="Richard Yann">
+            Richard Yann
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/chrome/" rel="tag">chrome</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/11/18/hello-world/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Hello World</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/03/20/%E9%AB%98%E6%96%AF%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8BGMM%E8%81%9A%E7%B1%BB%E7%9A%84%E6%AD%A5%E9%AA%A4%E5%92%8C%E6%8E%A8%E5%AF%BC/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">高斯混合模型GMM聚类的步骤和推导</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer" style="position:fixed;bottom:0;width:100%">
+<!--
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+-->
+    <div class="bottom">
+        <p><span>Richard Yann &copy; 2020</span>
+<!--
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+--!>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+		displayMath: [ ['$$','$$'] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '再看看嘛~';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Welcome to ATOM！';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
